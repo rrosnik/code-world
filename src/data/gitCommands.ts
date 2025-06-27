@@ -438,6 +438,204 @@ export const gitCommands: GitCommand[] = [
     ]
   },
   {
+    id: 'git-cherry-pick-edit',
+    title: 'Cherry Pick with Edit',
+    command: 'git cherry-pick --edit <commit>',
+    description: 'Apply changes from a commit and edit the commit message before committing.',
+    category: 'Advanced Operations',
+    examples: [
+      'git cherry-pick --edit abc123',
+      'git cherry-pick -e master~1'
+    ],
+    options: [
+      '-e : Same as --edit',
+      '--edit : Edit commit message before committing'
+    ]
+  },
+  {
+    id: 'git-cherry-pick-no-commit',
+    title: 'Cherry Pick without Commit',
+    command: 'git cherry-pick --no-commit <commit>',
+    description: 'Apply changes to working tree and index without creating a commit.',
+    category: 'Advanced Operations',
+    examples: [
+      'git cherry-pick --no-commit abc123',
+      'git cherry-pick -n master~1 next',
+      'git cherry-pick -n HEAD~3..HEAD'
+    ],
+    options: [
+      '-n : Same as --no-commit',
+      '--no-commit : Apply changes without committing'
+    ]
+  },
+  {
+    id: 'git-cherry-pick-mainline',
+    title: 'Cherry Pick from Merge',
+    command: 'git cherry-pick -m <parent-number> <commit>',
+    description: 'Cherry-pick a merge commit by specifying which parent to use as mainline.',
+    category: 'Advanced Operations',
+    examples: [
+      'git cherry-pick -m 1 abc123',
+      'git cherry-pick --mainline 2 merge-commit'
+    ],
+    options: [
+      '-m <number> : Specify parent number (starting from 1)',
+      '--mainline <number> : Same as -m'
+    ]
+  },
+  {
+    id: 'git-cherry-pick-signoff',
+    title: 'Cherry Pick with Signoff',
+    command: 'git cherry-pick --signoff <commit>',
+    description: 'Apply changes and add a Signed-off-by trailer to the commit message.',
+    category: 'Advanced Operations',
+    examples: [
+      'git cherry-pick --signoff abc123',
+      'git cherry-pick -s master~1'
+    ],
+    options: [
+      '-s : Same as --signoff',
+      '--signoff : Add Signed-off-by trailer'
+    ]
+  },
+  {
+    id: 'git-cherry-pick-gpg',
+    title: 'Cherry Pick with GPG Sign',
+    command: 'git cherry-pick --gpg-sign <commit>',
+    description: 'Apply changes and GPG-sign the resulting commit.',
+    category: 'Advanced Operations',
+    examples: [
+      'git cherry-pick --gpg-sign abc123',
+      'git cherry-pick -S abc123',
+      'git cherry-pick -S[keyid] abc123'
+    ],
+    options: [
+      '-S : Same as --gpg-sign',
+      '--gpg-sign[=<keyid>] : GPG-sign with optional key ID',
+      '--no-gpg-sign : Disable GPG signing'
+    ]
+  },
+  {
+    id: 'git-cherry-pick-ff',
+    title: 'Cherry Pick Fast-Forward',
+    command: 'git cherry-pick --ff <commit>',
+    description: 'Perform fast-forward if current HEAD is same as parent of cherry-picked commit.',
+    category: 'Advanced Operations',
+    examples: [
+      'git cherry-pick --ff abc123',
+      'git cherry-pick --ff ..next'
+    ],
+    options: [
+      '--ff : Enable fast-forward when possible'
+    ]
+  },
+  {
+    id: 'git-cherry-pick-empty',
+    title: 'Cherry Pick Empty Commits',
+    command: 'git cherry-pick --allow-empty <commit>',
+    description: 'Allow cherry-picking empty commits that would normally be skipped.',
+    category: 'Advanced Operations',
+    examples: [
+      'git cherry-pick --allow-empty abc123',
+      'git cherry-pick --empty=keep abc123',
+      'git cherry-pick --empty=drop abc123'
+    ],
+    options: [
+      '--allow-empty : Preserve empty commits',
+      '--empty=drop : Drop redundant commits',
+      '--empty=keep : Keep redundant commits',
+      '--empty=stop : Stop at redundant commits (default)'
+    ]
+  },
+  {
+    id: 'git-cherry-pick-continue',
+    title: 'Continue Cherry Pick',
+    command: 'git cherry-pick --continue',
+    description: 'Continue cherry-pick operation after resolving conflicts.',
+    category: 'Advanced Operations',
+    examples: [
+      'git cherry-pick --continue',
+      'git add . && git cherry-pick --continue'
+    ],
+    options: [
+      '--continue : Continue after conflict resolution'
+    ]
+  },
+  {
+    id: 'git-cherry-pick-abort',
+    title: 'Abort Cherry Pick',
+    command: 'git cherry-pick --abort',
+    description: 'Cancel the cherry-pick operation and return to pre-cherry-pick state.',
+    category: 'Advanced Operations',
+    examples: [
+      'git cherry-pick --abort',
+      'git status && git cherry-pick --abort'
+    ],
+    options: [
+      '--abort : Cancel operation and restore previous state'
+    ]
+  },
+  {
+    id: 'git-cherry-pick-skip',
+    title: 'Skip Cherry Pick',
+    command: 'git cherry-pick --skip',
+    description: 'Skip the current commit and continue with the rest of the sequence.',
+    category: 'Advanced Operations',
+    examples: [
+      'git cherry-pick --skip'
+    ],
+    options: [
+      '--skip : Skip current commit in sequence'
+    ]
+  },
+  {
+    id: 'git-cherry-pick-quit',
+    title: 'Quit Cherry Pick',
+    command: 'git cherry-pick --quit',
+    description: 'Forget about the current operation but keep any changes made.',
+    category: 'Advanced Operations',
+    examples: [
+      'git cherry-pick --quit'
+    ],
+    options: [
+      '--quit : Clear sequencer state but keep changes'
+    ]
+  },
+  {
+    id: 'git-cherry-pick-range',
+    title: 'Cherry Pick Range',
+    command: 'git cherry-pick <commit1>..<commit2>',
+    description: 'Apply a range of commits to the current branch.',
+    category: 'Advanced Operations',
+    examples: [
+      'git cherry-pick master~4..master~2',
+      'git cherry-pick ..master',
+      'git cherry-pick ^HEAD master'
+    ],
+    options: [
+      '..commit : All commits up to specified commit',
+      'commit1..commit2 : Range between two commits',
+      '^commit : Exclude commits reachable from commit'
+    ]
+  },
+  {
+    id: 'git-cherry-pick-strategy',
+    title: 'Cherry Pick with Strategy',
+    command: 'git cherry-pick --strategy=<strategy> <commit>',
+    description: 'Use specific merge strategy when cherry-picking commits.',
+    category: 'Advanced Operations',
+    examples: [
+      'git cherry-pick --strategy=recursive abc123',
+      'git cherry-pick -X patience topic^',
+      'git cherry-pick --strategy-option=ours abc123'
+    ],
+    options: [
+      '--strategy=<strategy> : Use specific merge strategy',
+      '-X<option> : Pass option to merge strategy',
+      '--strategy-option=<option> : Same as -X'
+    ]
+  },
+  {
     id: 'git-tag',
     title: 'Manage Tags',
     command: 'git tag',
