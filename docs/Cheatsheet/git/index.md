@@ -9,6 +9,15 @@ import { gitCommands } from '@site/src/data/gitCommands';
 
 A comprehensive, interactive reference for Git commands. Click on any command card to see detailed information, examples, and usage options.
 
+## 📋 Quick Navigation
+
+- **[Interactive Commands](.)** - Searchable command grid (this page)
+- **[Basic Commands](./basic-commands)** - Essential Git commands for everyday use
+- **[Branch Management](./branch-management)** - Branching, merging, and collaboration
+- **[Advanced Commands](./advanced-commands)** - Power user commands and workflows
+- **[📄 Poster Version](./poster)** - One-page visual reference with styling
+- **[🖨️ Print Version](./poster-print)** - Clean, printer-friendly poster
+
 <CommandGrid commands={gitCommands} />
 
 ## Quick Reference
