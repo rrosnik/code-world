@@ -9,6 +9,8 @@ import { terraformCommands } from '@site/src/data/terraformCommands';
 
 A comprehensive, interactive reference for Terraform commands. Click on any command card to see detailed information, examples, and usage options.
 
+**📄 [Terraform Poster](./poster)** - Visual one-page reference | **🖨️ [Print Version](./poster-print)** - Printer-friendly format
+
 <CommandGrid commands={terraformCommands} />
 
 ## Quick Reference

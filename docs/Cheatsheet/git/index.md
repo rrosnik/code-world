@@ -13,6 +13,9 @@ A comprehensive, interactive reference for Git commands. Click on any command ca
 
 - **[Interactive Commands](.)** - Searchable command grid (this page)
 - **[Basic Commands](./basic-commands)** - Essential Git commands for everyday use
+- **[Branch Management](./branch-management)** - Working with branches and merging
+- **[Advanced Commands](./advanced-commands)** - Advanced Git operations and troubleshooting
+- **[📄 Git Poster](./poster)** - Visual one-page reference | **🖨️ [Print Version](./poster-print)** - Printer-friendly format
 - **[Branch Management](./branch-management)** - Branching, merging, and collaboration
 - **[Advanced Commands](./advanced-commands)** - Power user commands and workflows
 - **[📄 Poster Version](./poster)** - One-page visual reference with styling

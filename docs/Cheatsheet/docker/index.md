@@ -7,6 +7,7 @@ Welcome to the comprehensive Docker commands cheatsheet! This interactive guide 
 - **[Basic Commands](./basic-commands)** - Essential Docker commands for everyday use
 - **[Container Management](./container-management)** - Advanced container operations and lifecycle management
 - **[Docker Compose](./docker-compose)** - Multi-container applications with Docker Compose
+- **[📄 Docker Poster](./poster)** - Visual one-page reference | **🖨️ [Print Version](./poster-print)** - Printer-friendly format
 
 ## Interactive Command Browser
 

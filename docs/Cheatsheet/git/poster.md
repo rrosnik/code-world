@@ -2,6 +2,8 @@
 
 A comprehensive one-page reference for all essential Git commands, organized by category for quick lookup.
 
+**📄 [Print-Friendly Version](./poster-print)** - Optimized for printing
+
 import React from 'react';
 
 export const GitPoster = () => (

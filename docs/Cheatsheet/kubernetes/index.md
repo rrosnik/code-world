@@ -7,6 +7,7 @@ Welcome to the comprehensive Kubernetes commands cheatsheet! This interactive gu
 - **[Basic Commands](./basic-commands)** - Essential kubectl commands for everyday use
 - **[Workload Management](./workload-management)** - Deployments, services, and application lifecycle
 - **[Cluster Operations](./cluster-operations)** - Advanced cluster management and troubleshooting
+- **[📄 Kubernetes Poster](./poster)** - Visual one-page reference | **🖨️ [Print Version](./poster-print)** - Printer-friendly format
 
 ## Interactive Command Browser
 
