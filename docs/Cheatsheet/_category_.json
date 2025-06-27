@@ -1,0 +1,8 @@
+{
+  "label": "Cheatsheets",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Quick reference guides and cheatsheets for various tools and technologies"
+  }
+}
