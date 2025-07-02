@@ -1,0 +1,113 @@
+.scenarioGridContainer {
+  width: 100%;
+}
+
+.filtersContainer {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.searchContainer {
+  width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-content);
+  transition: border-color 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+}
+
+.searchInput::placeholder {
+  color: var(--ifm-color-content-secondary);
+}
+
+.filterRow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.difficultyFilter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filterLabel {
+  font-weight: 500;
+  color: var(--ifm-color-content);
+  font-size: 0.875rem;
+}
+
+.difficultySelect {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-content);
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.difficultySelect:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+}
+
+.scenarioGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.noResults {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.noResults p {
+  margin: 0.5rem 0;
+  font-size: 1.125rem;
+}
+
+.noResults p:first-child {
+  font-weight: 600;
+  color: var(--ifm-color-content);
+}
+
+@media (max-width: 768px) {
+  .scenarioGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .filterRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .difficultyFilter {
+    justify-content: space-between;
+  }
+  
+  .difficultySelect {
+    flex: 1;
+    margin-left: 1rem;
+  }
+}

@@ -30,3 +30,42 @@ export interface CategoryFilterProps {
   selectedCategory: string;
   onCategoryChange: (category: string) => void;
 }
+
+export interface ScenarioStep {
+  stepNumber: number;
+  title: string;
+  command: string;
+  description: string;
+  explanation: string;
+}
+
+export interface GitScenario {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+  estimatedTime: string;
+  steps: ScenarioStep[];
+  prerequisites: string[];
+  warnings: string[];
+  relatedCommands: string[];
+  tags: string[];
+}
+
+export interface ScenarioCardProps {
+  scenario: GitScenario;
+  onClick: (scenario: GitScenario) => void;
+}
+
+export interface ScenarioModalProps {
+  scenario: GitScenario | null;
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export interface ScenarioGridProps {
+  scenarios: GitScenario[];
+  searchable?: boolean;
+  showCategoryFilter?: boolean;
+}

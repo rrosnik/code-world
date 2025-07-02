@@ -5,7 +5,7 @@ Comprehensive reference for Helm commands and operations. Helm is the package ma
 **📄 [Interactive Poster](./poster)** - Visual one-page reference with all commands  
 **🖨️ [Print-Friendly Poster](./poster-print)** - Optimized for printing
 
-import { CommandGrid } from '@site/src/components/CommandGrid';
+import CommandGrid from '@site/src/components/CommandGrid';
 import { helmCommands } from '@site/src/data/helmCommands';
 
 <CommandGrid commands={helmCommands} />

@@ -2,7 +2,7 @@
 
 Essential Helm commands for everyday operations including chart installation, upgrades, and basic management.
 
-import { CommandGrid } from '@site/src/components/CommandGrid';
+import CommandGrid from '@site/src/components/CommandGrid';
 import { helmCommands } from '@site/src/data/helmCommands';
 
 <CommandGrid commands={helmCommands} initialCategory="basic" />

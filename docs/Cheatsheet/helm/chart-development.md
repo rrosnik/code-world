@@ -2,7 +2,7 @@
 
 Advanced commands for creating, developing, testing, and packaging Helm charts.
 
-import { CommandGrid } from '@site/src/components/CommandGrid';
+import CommandGrid from '@site/src/components/CommandGrid';
 import { helmCommands } from '@site/src/data/helmCommands';
 
 <CommandGrid commands={helmCommands} initialCategory="chart" />
